@@ -1,0 +1,10 @@
+numpy
+scipy
+pydub
+librosa
+soundfile
+noisereduce
+pyloudnorm
+ffmpeg-python
+pytest
+click
