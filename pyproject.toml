@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "audioenhancer"
+version = "0.0.1"
+description = "A production-grade Python audio enhancement toolkit"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [
+    {name = "Diego Alejandro Botina", email = "codewithbotina@gmail.com"}
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "numpy",
+    "scipy",
+    "pydub",
+    "librosa",
+    "soundfile",
+    "noisereduce",
+    "pyloudnorm",
+    "ffmpeg-python",
+    "pytest",
+    "click"
+]
+
+[project.scripts]
+audioenhancer = "audio_enhancer.cli:cli"
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["tests*", "examples*"]
