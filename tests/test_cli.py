@@ -6,7 +6,7 @@ from examples.demo import main as create_sample_file
 def test_cli_process_file():
     # Create a sample file to process
     create_sample_file()
-    input_file = "examples/sample_audio/input.wav"
+    input_file = "examples/sample_audio/input.m4a"
     output_file = "examples/output/cli_test_output.wav"
 
     runner = CliRunner()
