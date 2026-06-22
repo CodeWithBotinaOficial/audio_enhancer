@@ -1,0 +1,68 @@
+site_name: AudioEnhancer
+site_description: A production-grade Python audio enhancement toolkit
+site_url: https://codewithbotinaoficial.github.io/audio_enhancer/
+repo_name: CodeWithBotinaOficial/audio_enhancer
+repo_url: https://github.com/CodeWithBotinaOficial/audio_enhancer
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+
+plugins:
+  - search
+  - gen-files:
+      scripts: []
+  - literate-nav
+  - section-index
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [audio_enhancer]
+          options:
+            docstring_style: google
+            show_source: true
+            show_root_heading: true
+            show_object_full_path: true
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Installation: installation.md
+    - Quick Start: quickstart.md
+  - User Guide:
+    - CLI Usage: cli.md
+    - Library Usage: library.md
+    - Pipeline Builder: pipeline.md
+    - Examples: examples.md
+  - API Reference:
+    - audio_enhancer.enhancer: api/enhancer.md
+    - audio_enhancer.noise_reduction: api/noise_reduction.md
+    - audio_enhancer.normalization: api/normalization.md
+  - Changelog: changelog.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/CodeWithBotinaOficial/audio_enhancer
