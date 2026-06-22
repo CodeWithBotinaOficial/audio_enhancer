@@ -32,10 +32,10 @@ This project requires [FFmpeg](https://ffmpeg.org/download.html) to be installed
 
 ### Command-Line Interface (CLI)
 
-The CLI provides a quick way to process audio files.
+The CLI provides a quick way to process audio files. You can run it as a module or after installing the package:
 
 ```bash
-python cli.py process-file examples/sample_audio/input.wav examples/output/output.mp3 --noise-profile spectral_gate --normalize lufs --lufs -16.0
+python -m audio_enhancer process-file examples/sample_audio/input.wav examples/output/output.mp3 --noise-profile spectral_gate --normalize lufs --lufs -16.0
 ```
 
 ### Library Usage
@@ -43,7 +43,7 @@ python cli.py process-file examples/sample_audio/input.wav examples/output/outpu
 The project can be used as a Python library by importing the `AudioEnhancer` facade.
 
 ```python
-from audio_enhancer.enhancer import AudioEnhancer
+from audio_enhancer import AudioEnhancer
 from audio_enhancer.normalization.lufs import LufsNormalizer
 from audio_enhancer.noise_reduction.spectral_gating import SpectralGatingNoiseReducer
 

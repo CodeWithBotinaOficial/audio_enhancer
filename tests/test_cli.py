@@ -1,6 +1,6 @@
 import os
 from click.testing import CliRunner
-from cli import cli
+from audio_enhancer.cli import cli
 from examples.demo import main as create_sample_file
 
 def test_cli_process_file():
