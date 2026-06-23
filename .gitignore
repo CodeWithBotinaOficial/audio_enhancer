@@ -64,3 +64,6 @@ examples/**/*.wav
 examples/**/*.mp3
 examples/**/*.flac
 examples/**/*.m4a
+
+# MkDocs build directory
+site/
