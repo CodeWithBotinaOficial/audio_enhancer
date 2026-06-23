@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.0.2] - 2026-06-22
+
+### Added
+- Add a professional documentation site using MkDocs with the Material theme, auto-deployed to GitHub Pages.
+- Add comprehensive Google-style docstrings to all public classes and methods.
+- Improve library landing page README with feature list, badges, and quick-start instructions.
+- Create execution examples for basic usage, pipelines, batch processing, and custom processing steps.
+
+### Fixed
+- Resolve non-existent GitHub Action configuration in the documentation deployment workflow.
+
 ## [0.0.1] - 2026-06-22
 
 ### Added
