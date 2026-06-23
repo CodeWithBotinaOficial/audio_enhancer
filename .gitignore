@@ -67,3 +67,7 @@ examples/**/*.m4a
 
 # MkDocs build directory
 site/
+
+# Reports output directory
+.reports/
+**/.reports/

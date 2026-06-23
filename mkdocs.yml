@@ -74,6 +74,7 @@ nav:
     - CLI Usage: cli.md
     - Library Usage: library.md
     - Pipeline Builder: pipeline.md
+    - Visual Reports: reports.md
     - Examples: examples.md
   - API Reference:
     - audio_enhancer.enhancer: api/enhancer.md
