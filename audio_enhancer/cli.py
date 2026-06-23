@@ -19,7 +19,9 @@ def cli():
 @click.option('--lufs', type=float, default=-16.0, help='Target LUFS for normalization.')
 @click.option('--peak-db', type=float, default=-1.0, help='Target peak dBFS for normalization.')
 @click.option('--rms-db', type=float, default=-20.0, help='Target RMS dBFS for normalization.')
-def process_file(input_file, output_file, noise_profile, normalize, lufs, peak_db, rms_db):
+@click.option('--generate-report', is_flag=True, default=False, help='Generate visual comparison reports in .reports/')
+@click.option('--report-dpi', type=int, default=150, help='DPI resolution for visual comparison reports.')
+def process_file(input_file, output_file, noise_profile, normalize, lufs, peak_db, rms_db, generate_report, report_dpi):
     """Process a single audio file."""
     enhancer = AudioEnhancer.get_instance()
     builder = enhancer.get_builder()
@@ -54,6 +56,18 @@ def process_file(input_file, output_file, noise_profile, normalize, lufs, peak_d
     enhancer.export_audio(processed_audio, output_file, output_format)
 
     click.echo(f"Processed {input_file} and saved to {output_file}")
+
+    if generate_report:
+        from audio_enhancer.reports.generator import ReportGenerator
+        click.echo("Generating visual comparison reports...")
+        generator = ReportGenerator.create_default(".reports")
+        generator.dpi = report_dpi
+        report_paths = generator.generate_all(input_file, output_file)
+        
+        click.echo("Report Generation Summary:")
+        click.echo("Successfully generated visual comparisons comparing original and processed audio:")
+        for path in report_paths:
+            click.echo(f"  - {path}")
 
 if __name__ == '__main__':
     cli()

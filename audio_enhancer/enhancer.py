@@ -80,3 +80,20 @@ class AudioEnhancer:
             PipelineBuilder: A new pipeline builder instance.
         """
         return PipelineBuilder()
+
+    def generate_report(self, original_path: str, processed_path: str, 
+                        output_dir: str = ".reports") -> list:
+        """Generate visual comparison reports for processed audio.
+
+        Args:
+            original_path (str): Path to the original audio file.
+            processed_path (str): Path to the processed audio file.
+            output_dir (str): Directory where comparison reports will be stored.
+
+        Returns:
+            list[Path]: List of paths to the generated report files.
+        """
+        from pathlib import Path
+        from audio_enhancer.reports.generator import ReportGenerator
+        generator = ReportGenerator.create_default(output_dir)
+        return generator.generate_all(original_path, processed_path)
