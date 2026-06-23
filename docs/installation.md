@@ -9,7 +9,7 @@ Before installing the library, ensure that you have the following requirements:
 1. **Python**: `Python >= 3.9`
 2. **FFmpeg**: This package relies on `pydub`, which requires FFmpeg to decode and encode non-WAV formats.
 
-### Installing FFmpeg
+## Installing FFmpeg
 
 Depending on your operating system, install FFmpeg using one of the following methods:
 
@@ -32,7 +32,8 @@ Depending on your operating system, install FFmpeg using one of the following me
     ```bash
     choco install ffmpeg
     ```
-    Or download the executable binaries directly from [ffmpeg.org](https://ffmpeg.org/download.html) and add them to your system's `PATH`.
+
+    Or download the executable binaries directly from [ffmpeg.org](https://ffmpeg.org/download.html).
 
 ---
 

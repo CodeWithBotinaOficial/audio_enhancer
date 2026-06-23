@@ -15,17 +15,8 @@ pip install audioenhancer
 
 <div class="grid cards" markdown>
 
--   :material-book-open-outline: **Read the docs**
-    
-    Learn how to install and integrate AudioEnhancer.
-    
-    [:octicons-arrow-right-24: Installation](installation.md)
-
--   :material-api: **Explore the API**
-    
-    Deep dive into the public classes and facade functions.
-    
-    [:octicons-arrow-right-24: API Reference](api/enhancer.md)
+- :material-book-open-outline: **Read the docs** — Learn how to install and integrate AudioEnhancer. [:octicons-arrow-right-24: Installation](installation.md)
+- :material-api: **Explore the API** — Deep dive into the public classes and facade functions. [:octicons-arrow-right-24: API Reference](api/enhancer.md)
 
 </div>
 
@@ -33,24 +24,10 @@ pip install audioenhancer
 
 <div class="grid cards" markdown>
 
--   **🤫 Noise Reduction**
-
-    Spectral gating for continuous static and median filter for click/pop/impulse noise removal.
-
--   **🎚️ Normalization**
-
-    Loudness normalization matching peak, average (RMS), or EBU R128 standard (LUFS) levels.
-
--   **🔁 Format Conversion**
-
-    Decode and encode multiple audio formats (WAV, MP3, FLAC, etc.) under the hood.
-
--   **🖥️ Command-Line Interface**
-
-    Perform processing actions directly from terminal without writing code.
-
--   **🛠️ Fluent Pipeline Builder**
-
-    Assemble and chain multi-step processing strategies using a simple builder pattern.
+- :material-volume-off: **Noise Reduction** — Spectral gating for continuous static and median filter for click/pop/impulse noise removal.
+- :material-tune-vertical: **Normalization** — Loudness normalization matching peak, average (RMS), or EBU R128 standard (LUFS) levels.
+- :material-swap-horizontal: **Format Conversion** — Decode and encode multiple audio formats (WAV, MP3, FLAC, etc.) under the hood.
+- :material-console: **Command-Line Interface** — Perform processing actions directly from terminal without writing code.
+- :material-pipe: **Fluent Pipeline Builder** — Assemble and chain multi-step processing strategies using a simple builder pattern.
 
 </div>
